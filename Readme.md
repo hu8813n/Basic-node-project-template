@@ -48,3 +48,38 @@ ex:   `PORT=3000`
 To run the server execute
 
 `npm run dev`
+
+
+-- Inside the `src/config` folder you have to create a `config.json` file and add the following env variables
+```
+{
+  "development": {
+    "username": "root",
+    "password": your_password,
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
+```
+
+--
+Go inside the `src` folder and run `npx sequelize init` to create the migrations and seeders folder along with a config.json inside the config folder.
+
+-- if you are setting up a development environment, then write the username of your db, password of your db and in dialect mention whatever db you are using for ex: mysql, mariadb etc
+-- if you are setting up test or prod environment, make sure you also replace the host with the hosted db url.
+
