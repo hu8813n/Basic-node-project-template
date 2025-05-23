@@ -48,4 +48,3 @@ ex:   `PORT=3000`
 To run the server execute
 
 `npm run dev`
- 
